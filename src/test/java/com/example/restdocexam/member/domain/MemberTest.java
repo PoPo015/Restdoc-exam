@@ -1,6 +1,7 @@
 package com.example.restdocexam.member.domain;
 
 import com.example.restdocexam.member.domain.dto.MemberRequest;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -78,15 +79,14 @@ class MemberTest {
     @Test
     void 멤버_단건_등록() throws Exception{
 
-
-//        new Jackson
         MemberRequest memberRequest = new MemberRequest("email", "이름");
 
+        ObjectMapper objectMapper = new ObjectMapper();
 
         mockMvc.perform(
                 post("/api/members")
-                        .content(memberRequest)
                         .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(memberRequest))
         ).andExpect(status().isOk());
 
         System.out.println("memberRepository.findAll().size() > " + memberRepository.findAll().size());

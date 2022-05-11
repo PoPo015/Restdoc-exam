@@ -23,7 +23,7 @@ public class MemberController {
     }
 
 
-    @PostMapping("")
+    @PostMapping
     public void createMember(@RequestBody MemberRequest memberRequest){
 
         Member member = new Member();
