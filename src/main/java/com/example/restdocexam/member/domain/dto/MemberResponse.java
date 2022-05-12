@@ -2,18 +2,20 @@ package com.example.restdocexam.member.domain.dto;
 
 import com.example.restdocexam.member.domain.Member;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
+@NoArgsConstructor
 public class MemberResponse {
 
-    private final Long id;
-    private final String email;
-    private final String name;
+    private Long id;
+    private String email;
+    private Integer age;
 
     public MemberResponse(Member member) {
         this.id = member.getId();
         this.email = member.getEmail();
-        this.name = member.getName();
+        this.age = member.getAge();
     }
 
 

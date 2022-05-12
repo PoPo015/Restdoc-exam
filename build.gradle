@@ -37,6 +37,8 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+
+    testCompileOnly 'org.projectlombok:lombok'          //추가
     testAnnotationProcessor 'org.projectlombok:lombok' // 추가
     testImplementation 'com.h2database:h2:1.4.199'     //추가
 

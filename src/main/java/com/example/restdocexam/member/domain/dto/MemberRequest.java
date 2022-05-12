@@ -9,17 +9,17 @@ public class MemberRequest {
 
     private Long id;
     private String email;
-    private String name;
+    private Integer age;
 
 
-    public MemberRequest(Long id, String email, String name) {
+    public MemberRequest(Long id, String email, Integer age) {
         this.id = id;
         this.email = email;
-        this.name = name;
+        this.age = age;
     }
 
-    public MemberRequest(String email, String name) {
+    public MemberRequest(String email, Integer age) {
         this.email = email;
-        this.name = name;
+        this.age = age;
     }
 }
