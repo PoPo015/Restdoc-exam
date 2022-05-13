@@ -1,5 +1,6 @@
 package com.example.restdocexam.member.domain.dto;
 
+import com.example.restdocexam.member.domain.MemberStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,8 @@ public class MemberRequest {
     private Long id;
     private String email;
     private Integer age;
+
+    private MemberStatus status;
 
 
     public MemberRequest(Long id, String email, Integer age) {

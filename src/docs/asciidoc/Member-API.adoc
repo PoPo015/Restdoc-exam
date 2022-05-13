@@ -17,3 +17,6 @@ operation::refactor-member-test/member_page_test[snippets='http-request,request-
 
 operation::refactor-member-test/member_create[snippets='http-request,request-fields,http-response']
 
+[[Member-정보-수정]]
+=== Member 정보수정
+operation::refactor-member-test/member_modify[snippets='http-request,request-fields,http-response']
