@@ -24,6 +24,10 @@ repositories {
 
 dependencies {
 
+    //validation @NonNull
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation'
+
+
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     implementation 'com.fasterxml.jackson.core:jackson-databind'
 

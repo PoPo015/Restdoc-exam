@@ -38,11 +38,13 @@ class MemberTest {
     @Test
     public void 멤버_단건_조회() throws Exception {
         // 조회 API -> 대상의 데이터가 있어야 합니다.
+
         mockMvc.perform(
                         get("/api/members/{id}", 1L)
                                 .contentType(MediaType.APPLICATION_JSON)
                 )
                 .andExpect(status().isOk())
+
                 .andDo( // rest docs 문서 작성 시작
                         document("member-controller-test/member-get", // 문서 조각 디렉토리 명
                                 pathParameters( // path 파라미터 정보 입력
@@ -56,7 +58,6 @@ class MemberTest {
                         )
                 );
     }
-
 
 
 
@@ -78,7 +79,6 @@ class MemberTest {
 
     }
 */
-
 
 
 }
