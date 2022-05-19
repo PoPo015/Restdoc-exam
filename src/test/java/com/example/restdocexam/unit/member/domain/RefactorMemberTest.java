@@ -5,12 +5,10 @@ import com.example.restdocexam.member.domain.MemberStatus;
 import com.example.restdocexam.member.domain.dto.MemberSignUpRequest;
 import com.example.restdocexam.support.docs.RestDocsTestSupport;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentMatchers;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.RequestBuilder;
 
 import java.util.List;
 import java.util.Optional;
@@ -30,7 +28,7 @@ class RefactorMemberTest extends RestDocsTestSupport {
 
     @Test
     public void member_page_test() throws Exception {
-        //given
+//        given
         Member member = new Member("backtony@gmail.com", 27, MemberStatus.NORMAL);
         //when
         PageImpl<Member> memberPage = new PageImpl<>(List.of(member), PageRequest.of(0, 10), 1);
@@ -41,7 +39,6 @@ class RefactorMemberTest extends RestDocsTestSupport {
                                 .param("size", "10")
                                 .param("page", "0")
                                 .contentType(MediaType.APPLICATION_JSON))
-                //then
                 .andExpect(status().isOk())
                 .andDo(
                         restDocs.document(

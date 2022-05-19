@@ -26,14 +26,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @AutoConfigureRestDocs // rest docs 자동 설정
-class MemberTest {
+class MemberTest{
 
     @Autowired
     MockMvc mockMvc;
 
     @Autowired
     MemberRepository memberRepository;
-
 
     @Test
     public void 멤버_단건_조회() throws Exception {
