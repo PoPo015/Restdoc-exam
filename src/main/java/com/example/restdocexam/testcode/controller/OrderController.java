@@ -42,5 +42,12 @@ public class OrderController {
         orderSerivce.orderDelete(id);
     }
 
+    @PutMapping("/order")
+    private void orderPut(@RequestBody OrderRequest request){
+        log.info("> Controller 주문 수정");
+
+        orderSerivce.orderChange(request);
+    }
+
 
 }
