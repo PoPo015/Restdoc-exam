@@ -69,7 +69,6 @@ public class OrderSerivce {
     public Order orderChange(OrderRequest request) {
         log.info("> request ---> {}", request);
 
-
         Optional<Order> byId = orderRepository.findById(request.getId());
 
         if(!byId.isPresent()){

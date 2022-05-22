@@ -1,17 +1,22 @@
 spring:
-  jpa:
-    database:
+  datasource:
       url: jdbc:h2:mem:test
       username: sa
       password:
       driver-class-name: org.h2.Driver
-    h2: #메모리 모드로 쓸경우 추가
-      console: #메모리 모드로 쓸경우 추가
-        enabled: true           #메모리 모드로 쓸경우 추가
+
+  jpa:
+    defer-datasource-initialization: true
     hibernate:
       ddl-auto: create
-#    show-sql: true         logging level 에서 로그를찍어서 주석처리.
-    open-in-view: false
+    properties:
+      hibernate:
+        show_sql: true
+  h2: #메모리 모드로 쓸경우 추가
+    console: #메모리 모드로 쓸경우 추가
+      enabled: true           #메모리 모드로 쓸경우 추가
+
+
 management:
   endpoints:
     web:

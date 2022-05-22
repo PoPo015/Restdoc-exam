@@ -1,0 +1,1 @@
+insert into TB_ORDER(ID, PRODUCT_NAME) values(1, '상품명1');

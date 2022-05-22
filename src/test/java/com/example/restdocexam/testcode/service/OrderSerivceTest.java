@@ -40,7 +40,7 @@ class OrderSerivceTest {
         Order realOrder = orderSerivce.orderFindOne(1L);
 
         //then
-        assertEquals(fakeOrder, realOrder);
+        Assertions.assertThat(fakeOrder).isEqualTo(realOrder);
     }
 
     @DisplayName("주문_전체_조회")
@@ -86,10 +86,6 @@ class OrderSerivceTest {
 
     }
 
-//        검증 -> 운영 설정 맞추기
-//                1.리뷰어 맞추고
-//                2.버전맞추고.
-
 
     @DisplayName("주문_삭제")
     @Test
@@ -118,8 +114,8 @@ class OrderSerivceTest {
 
         given(orderRepository.findById(request.getId()))
                 .willReturn(Optional.of(fakeOrder));
-        //when
 
+        //when
         Order realOrder = orderSerivce.orderChange(request);
 
         //then

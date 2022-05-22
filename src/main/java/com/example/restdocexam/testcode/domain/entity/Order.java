@@ -16,8 +16,10 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
+    @Column(name = "PRODUCT_NAME")
     private String productName;
 
 

@@ -11,7 +11,6 @@ public class MemberRequest {
     private Long id;
     private String email;
     private Integer age;
-
     private MemberStatus status;
 
 
@@ -25,4 +24,5 @@ public class MemberRequest {
         this.email = email;
         this.age = age;
     }
+
 }
